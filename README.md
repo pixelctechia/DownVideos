@@ -1,122 +1,99 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/pixelctechia/DownVideos)
-![Python](https://img.shields.io/badge/Python-3.6+-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+# DownVideos - Download de Vídeos e Conversor MP3 🎥🎵
 
-**DownVideos** é uma aplicação em Python com interface gráfica (GUI) projetada para baixar vídeos de plataformas como YouTube, Instagram e TikTok na melhor qualidade disponível e converter vídeos locais para o formato MP3. Desenvolvido com `tkinter` para a interface, `yt_dlp` para downloads e `moviepy` para conversão de áudio, este projeto foi criado com propósitos **didáticos** e não deve ser utilizado para fins comerciais.
+Uma ferramenta simples, gratuita e poderosa desenvolvida em Python para baixar vídeos do YouTube (incluindo Shorts) na melhor qualidade disponível e converter arquivos de vídeo locais para o formato MP3.
 
-> **Nota Importante**: Este script é destinado exclusivamente a fins educacionais. O uso para baixar vídeos é de total responsabilidade do usuário, respeitando os direitos autorais e os termos de serviço das plataformas.
+---
 
-## Funcionalidades
+## ✨ Funcionalidades
 
-- **Download de Vídeos**: Baixe vídeos do YouTube, Instagram e TikTok inserindo a URL e escolhendo uma pasta de destino.
-- **Conversão para MP3**: Transforme arquivos de vídeo locais (MP4, MKV, AVI, etc.) em áudio MP3.
-- **Interface Simples**: GUI intuitiva com barra de progresso para acompanhar o download.
-- **Feedback em Tempo Real**: Status atualizado durante o processo, com mensagens de erro ou sucesso.
+- **Download de Vídeos:** Baixa vídeos do YouTube utilizando o motor robusto do `yt-dlp`.
+- **Qualidade Superior:** Seleção automática dos melhores fluxos de áudio e vídeo disponíveis.
+- **Conversão Local:** Transforma qualquer arquivo de vídeo local (.mp4, .mkv, .avi, etc.) em MP3 com um clique.
+- **Interface Intuitiva:** Interface gráfica (GUI) amigável construída com Tkinter.
+- **Não Trava:** Utiliza *Threading* para garantir que a interface continue respondendo durante o processamento.
+- **Grátis e Ilimitado:** Sem taxas, sem limites de uso.
 
-## Demonstração
-*(Adicione um GIF ou screenshot aqui para mostrar a interface em ação!)*  
-<!-- Exemplo: ![Demo](docs/demo.gif) -->
+---
 
-## Requisitos
+## 📋 Requisitos do Sistema
 
-- **Python**: 3.6 ou superior
-- **Dependências**:
-  - `tkinter` (incluso no Python)
-  - `yt_dlp` - Para downloads
-  - `moviepy` - Para conversão
-  - `ffmpeg` - Necessário para manipulação de áudio/vídeo
+Antes de começar, você precisará ter instalado:
+1. **Python 3.8 ou superior**: [Download Python](https://www.python.org/downloads/)
+2. **FFmpeg**: Essencial para a fusão de áudio/vídeo e conversão de formatos.
+   - [Guia de instalação do FFmpeg](https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg)
 
-### Instalação das Dependências
-```bash
-pip install yt-dlp moviepy
-```
- Instale o `ffmpeg`:
-- **Windows**: Baixe em [ffmpeg.org](https://ffmpeg.org) e adicione ao PATH.
-- **Linux**: `sudo apt-get install ffmpeg`
-- **macOS**: `brew install ffmpeg`
+---
 
-## Como Usar
+## 🚀 Instalação e Dependências
 
-1. **Clone o Repositório**:
+Siga os passos abaixo para rodar o projeto localmente:
+
+1. **Clone o repositório:**
    ```bash
    git clone https://github.com/pixelctechia/DownVideos.git
    cd DownVideos
    ```
 
-2. **Execute o Script**:
+2. **Crie um ambiente virtual (opcional, mas recomendado):**
    ```bash
-   python downvideos.py
+   python -m venv .venv
+   .venv\Scripts\activate  # No Windows
+   source .venv/bin/activate  # No Linux/Mac
    ```
 
-3. **Na Interface**:
-   - **Download**: Insira a URL (YouTube, Instagram ou TikTok), selecione a pasta e clique em "Baixar Vídeo".
-   - **Conversão**: Escolha um vídeo local e clique em "Converter Selecionado para MP3".
-
-## Exemplo de Uso
-
-- **Download**: URL `https://www.youtube.com/watch?v=example` → Salva como `Título do Vídeo.mp4`.
-- **Conversão**: Selecione `meu_video.mp4` → Gera `meu_video.mp3`.
-
-## Estrutura do Projeto
-
-- `downvideos.py`: Script principal com a lógica de download e conversão.
-- `README.md`: Este arquivo.
-- `requirements.txt`: Lista de dependências.
-- `LICENSE`: Licença MIT.
-
-## Limitações
-
-- Requer internet para downloads.
-- Conversão depende de áudio presente no vídeo.
-- Formatos suportados variam conforme `ffmpeg` e `yt_dlp`.
-
-## Aviso Legal
-
-Este projeto é **didático**. O download de vídeos deve respeitar os termos das plataformas e leis de direitos autorais. A responsabilidade é do usuário.
-
-## Como Contribuir
-
-1. Faça um fork deste repositório.
-2. Crie uma branch: `git checkout -b minha-melhoria`.
-3. Commit suas mudanças: `git commit -m "Adicionei X"`.
-4. Envie um pull request: `git push origin minha-melhoria`.
-
-**Ideias**:
-- Suporte a mais plataformas.
-- Opções de qualidade de download.
-- Melhorias na interface.
-
-## Comunidade
-
-- ⭐ Dê uma estrela se gostar do projeto!
-- Abra um [issue](https://github.com/pixelctechia/DownVideos/issues) para sugestões ou bugs.
-
-## Licença
-
-Licenciado sob a [MIT License](LICENSE).
+3. **Instale as bibliotecas necessárias:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ---
 
-**Feito com ❤️ por [pixelctechia](https://github.com/pixelctechia)**  
+## 🛠️ Como Usar
+
+### Para Baixar Vídeos:
+1. Execute o aplicativo: `python app.py`.
+2. Cole a **URL do vídeo** no campo indicado.
+3. Clique em **Selecionar Pasta** para escolher onde o vídeo será salvo.
+4. Clique em **Baixar Vídeo**.
+
+### Para Converter Vídeo Local para MP3:
+1. Clique em **Escolher Vídeo** e selecione um arquivo no seu computador.
+2. Clique em **Converter para MP3**. O arquivo será salvo na mesma pasta do vídeo original.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+DownVideos/
+├── app.py              # Código fonte principal (Interface e Lógica)
+├── requirements.txt    # Lista de dependências do projeto
+├── README.md           # Documentação do projeto
+└── LICENSE             # Licença de uso (MIT)
 ```
 
 ---
 
-### Como Usar Este README
-1. Abra o GitHub Desktop e navegue até `D:\02-PROJETOS_CODE\DownVideos`.
-2. Abra o arquivo `README.md` em um editor de texto (como Bloco de Notas ou VS Code).
-3. Copie e cole o conteúdo acima.
-4. Salve o arquivo.
-5. No GitHub Desktop:
-   - Veja as mudanças na aba **Changes**.
-   - Digite uma mensagem de commit (ex.: "Atualizando README") e clique em **Commit to main**.
-   - Clique em **Push origin** para enviar ao GitHub.
+## ⚠️ Aviso Legal
+
+Este projeto foi desenvolvido para fins estritamente **educacionais**. O uso desta ferramenta para baixar conteúdo protegido por direitos autorais sem permissão pode violar os Termos de Serviço do YouTube e as leis de propriedade intelectual. Use com responsabilidade.
 
 ---
 
-### Por Que Esse README é Bom?
-- **Badges**: Mostram o tamanho do repositório, linguagem e licença, dando um toque profissional.
-- **Estrutura Clara**: Seções organizadas facilitam a leitura.
-- **Convite à Colaboração**: Inclui instruções simples para contribuir e ideias específicas.
-- **Visibilidade**: Palavras-chave como "YouTube", "TikTok", "MP3" ajudam nas buscas.
-- **Demonstração**: Espaço para um GIF (adicione depois, se quiser!).
+## 🤝 Como Contribuir
+
+1. Faça um **Fork** do projeto.
+2. Crie uma **Branch** para sua melhoria (`git checkout -b feature/minha-melhoria`).
+3. Faça o **Commit** das suas alterações (`git commit -m "Adicionei X funcionalidade"`).
+4. Envie para o GitHub (**Push**) (`git push origin feature/minha-melhoria`).
+5. Abra um **Pull Request**.
+
+---
+
+## ⚖️ Licença
+
+Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Desenvolvido por [Pixel C Tech](https://github.com/pixelctechia) 🚀
