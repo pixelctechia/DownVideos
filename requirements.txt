@@ -1,2 +1,2 @@
-yt-dlp
+yt-dlp>=2025.12.8
 moviepy==1.0.3
